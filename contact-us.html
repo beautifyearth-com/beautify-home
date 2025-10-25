@@ -56,7 +56,18 @@
             </select><label for="name" class="drop-us-form-title">* Your name</label><input class="drop-us-input-field w-input" maxlength="256" name="name" data-name="Name" placeholder="" type="text" id="name" required=""><label for="company">Company Name</label><input class="drop-us-input-field w-input" maxlength="256" name="Company" data-name="Company" placeholder="" type="text" id="company"><label for="email">* Email</label><input class="drop-us-input-field w-input" maxlength="256" name="email" data-name="Email" placeholder="" type="email" id="email" required=""><label for="phone">Phone</label><input class="drop-us-input-field w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="" type="tel" id="phone"><label for="message">Message</label><textarea placeholder="" maxlength="5000" id="message" name="Message" data-name="Message" class="drop-us-input-field drop-us-textarea w-input"></textarea>
             <div data-netlify-recaptcha="true"></div>
             <input type="submit" data-wait="Please wait..." class="submit-button w-button" value="Send">
-            <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+          </form>
+          <div class="success-message w-form-done">
+            <div class="text-block-3">Thanks for reaching out! We'll be in touch soon.</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
               <div class="container w-container">
                 <nav role="navigation" class="nav-menu w-nav-menu">
                   <div class="nav-links">
@@ -86,17 +97,6 @@
                 </div>
               </div>
             </div>
-          </form>
-          <div class="success-message w-form-done">
-            <div class="text-block-3">Thanks for reaching out! We&#x27;ll be in touch soon.</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="schedule-some-time-section">
     <div class="schedule-text-container">
       <h1 class="schedule-title">SCHEDULE SOME TIME</h1>
@@ -145,7 +145,11 @@
         <p class="paragraph-7">Get your 5-min weekly scooop of mural &amp; street art opps, art, events, &amp; media delivered straight to you<br></p>
       </div>
       <div id="newsletter-form" class="newsletter-form w-form">
-        <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" data-name="Newsletter Form" action="/" method="post" class="footer-form-container-two" data-wf-page-id="64666cbb935cec26151c5c74" data-wf-element-id="55e31523-51da-038f-ce9d-1a75f9ca32de">
+        <form id="wf-form-Newsletter-Form" name="newsletter" data-name="Newsletter Form" method="POST" netlify netlify-honeypot="bot-field-newsletter" class="footer-form-container-two">
+          <input type="hidden" name="form-name" value="newsletter">
+          <p style="display:none">
+            <label>Don't fill this out: <input name="bot-field-newsletter" /></label>
+          </p>
           <div class="footer-form-block-two"><input class="footer-form-input w-input" maxlength="256" name="Email" data-name="Email" aria-label="Enter your email" placeholder="Drop your email here" type="email" id="newsletter-email" required=""><input id="newsletter-submit" type="submit" data-wait="Please wait..." class="button-primary footer-form-button w-button" value="Subscribe"></div>
         </form>
         <div class="success-message-2 w-form-done">

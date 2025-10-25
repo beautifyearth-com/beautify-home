@@ -306,7 +306,11 @@
           <p class="paragraph-7">Sign up for your 5-min weekly scooop of art opps, artists, events, &amp; news delivered straight to you. <a href="https://www.beautifyearth.com/blog/scooop" class="newsletter-link-sm is-black">Get a taste &gt;&gt;</a><br></p>
         </div>
         <div id="newsletter-form" class="newsletter-form mobile w-form">
-          <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" data-name="Newsletter Form" action="/" method="post" class="footer-form-container-two" data-wf-page-id="642b4c92d4d87f03c8892db0" data-wf-element-id="142c04cd-e4d2-716c-7c61-8cc67b9ac480">
+          <form id="wf-form-Newsletter-Form" name="newsletter-popup" data-name="Newsletter Form" method="POST" netlify netlify-honeypot="bot-field-popup" class="footer-form-container-two">
+            <input type="hidden" name="form-name" value="newsletter-popup">
+            <p style="display:none">
+              <label>Don't fill this out: <input name="bot-field-popup" /></label>
+            </p>
             <div class="footer-form-block-two mobile"><input class="footer-form-input popup w-input" maxlength="256" name="Email" data-name="Email" aria-label="Enter your email" placeholder="Drop your email here" type="email" id="newsletter-email" required=""><input type="submit" data-wait="Please wait..." id="newsletter-submit" class="button-primary footer-form-button w-button" value="Subscribe"></div>
           </form>
           <div class="success-message-2 w-form-done">
@@ -326,7 +330,11 @@
         <p class="paragraph-7">Get your 5-min weekly scooop of mural &amp; street art opps, art, events, &amp; media delivered straight to you<br></p>
       </div>
       <div id="newsletter-form" class="newsletter-form w-form">
-        <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" data-name="Newsletter Form" action="/" method="post" class="footer-form-container-two" data-wf-page-id="642b4c92d4d87f03c8892db0" data-wf-element-id="55e31523-51da-038f-ce9d-1a75f9ca32de">
+        <form id="wf-form-Newsletter-Form" name="newsletter-footer" data-name="Newsletter Form" method="POST" netlify netlify-honeypot="bot-field-footer" class="footer-form-container-two">
+          <input type="hidden" name="form-name" value="newsletter-footer">
+          <p style="display:none">
+            <label>Don't fill this out: <input name="bot-field-footer" /></label>
+          </p>
           <div class="footer-form-block-two"><input class="footer-form-input w-input" maxlength="256" name="Email" data-name="Email" aria-label="Enter your email" placeholder="Drop your email here" type="email" id="newsletter-email" required=""><input id="newsletter-submit" type="submit" data-wait="Please wait..." class="button-primary footer-form-button w-button" value="Subscribe"></div>
         </form>
         <div class="success-message-2 w-form-done">
