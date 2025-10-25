@@ -1,0 +1,121 @@
+/* Featured Artists Section */
+.featured-artists-section {
+  max-width: 1000px;
+  margin: 50px auto 100px;
+  padding: 0 40px;
+  text-align: center;
+  position: relative;
+  z-index: 11;
+}
+
+.featured-artists-title {
+  color: white;
+  font-family: 'Druk Wide Trial-Heavy', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.featured-artists-subtitle {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+#featured-artists-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.featured-artist-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+.featured-artist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.featured-artist-image-wrapper {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.featured-artist-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-artist-name {
+  padding: 15px 10px 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.featured-artist-location {
+  padding: 0 10px 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Loading state */
+.loading-artists {
+  grid-column: 1 / -1;
+  padding: 60px 20px;
+  color: white;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  #featured-artists-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .featured-artists-section {
+    padding: 0 28px;
+    margin: 80px auto 40px;
+  }
+  
+  #featured-artists-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .featured-artists-section {
+    padding: 0 20px;
+    margin: 40px auto;
+  }
+  
+  .featured-artists-title {
+    font-size: 32px;
+  }
+  
+  #featured-artists-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Form Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #555;
+    }
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+    button {
+      background: #667eea;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #5568d3;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .message {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 5px;
+      display: none;
+    }
+    .success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    .info {
+      background: #d1ecf1;
+      color: #0c5460;
+      border: 1px solid #bee5eb;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .debug {
+      margin-top: 30px;
+      padding: 15px;
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+    .debug h3 {
+      margin-top: 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📧 Newsletter Form Test</h1>
+    
+    <div class="info">
+      <strong>⚠️ Important:</strong> This must be run on a local web server (http://localhost), not opened directly (file://)
+    </div>
+
+    <form id="newsletter-test-form">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+      </div>
+      
+      <button type="submit" id="submit-btn">Subscribe to Newsletter</button>
+    </form>
+
+    <div id="success-message" class="message success">
+      ✅ Success! Email subscribed to newsletter.
+    </div>
+
+    <div id="error-message" class="message error">
+      ❌ Error: <span id="error-text"></span>
+    </div>
+
+    <div class="debug">
+      <h3>Debug Info:</h3>
+      <div id="debug-info">
+        <p><strong>Protocol:</strong> <span id="protocol"></span></p>
+        <p><strong>API Endpoint:</strong> <span id="api-endpoint"></span></p>
+        <p><strong>Status:</strong> <span id="status">Ready</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Show debug info
+    document.getElementById('protocol').textContent = window.location.protocol;
+    
+    const apiDestination = location.hostname.includes('webflow.io') ? 
+      'api-dev.bedev.us' : 'api.beautifyearth.com';
+    
+    const apiUrl = `https://${apiDestination}/user/registerEmailForNewsletter`;
+    document.getElementById('api-endpoint').textContent = apiUrl;
+
+    // Check if using file:// protocol
+    if (window.location.protocol === 'file:') {
+      document.getElementById('status').innerHTML = '⚠️ <strong style="color: red;">WARNING: Using file:// protocol. Forms will NOT work. Please use a local web server!</strong>';
+    } else {
+      document.getElementById('status').innerHTML = '✅ <strong style="color: green;">Using http:// protocol. Forms should work!</strong>';
+    }
+
+    // Form submission handler
+    document.getElementById('newsletter-test-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const submitBtn = document.getElementById('submit-btn');
+      const successMsg = document.getElementById('success-message');
+      const errorMsg = document.getElementById('error-message');
+      const errorText = document.getElementById('error-text');
+      
+      // Hide messages
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      
+      // Disable button
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Subscribing...';
+      
+      try {
+        console.log('Submitting email:', email);
+        console.log('API URL:', apiUrl);
+        
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email })
+        });
+        
+        console.log('Response status:', response.status);
+        console.log('Response ok:', response.ok);
+        
+        if (!response.ok) {
+          const errorData = await response.text();
+          console.error('Error response:', errorData);
+          throw new Error(`Server returned ${response.status}: ${errorData}`);
+        }
+        
+        const data = await response.json();
+        console.log('Success response:', data);
+        
+        // Show success
+        successMsg.style.display = 'block';
+        document.getElementById('email').value = '';
+        
+      } catch (error) {
+        console.error('Error:', error);
+        errorText.textContent = error.message;
+        errorMsg.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Subscribe to Newsletter';
+      }
+    });
+  </script>
+</body>
+</html>

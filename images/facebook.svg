@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artist-Index-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artist-Index-Desktop" transform="translate(-645.000000, -4024.000000)">
+            <g id="footer/desktop" transform="translate(3.000000, 3528.000000)">
+                <g id="icon/facebook" transform="translate(642.000000, 496.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                    <path d="M12,2 C6.477,2 2,6.48125719 2,12.009509 C2,17.4096392 6.275,21.7988089 11.621,22 L11.621,15.0513988 L9.278,15.0513988 L9.278,12.3238076 L11.621,12.3238076 L11.621,10.3169011 C11.621,7.99069116 13.042,6.72248636 15.116,6.72248636 C15.815,6.72048446 16.513,6.75651869 17.208,6.82758621 L17.208,9.2598969 L15.78,9.2598969 C14.65,9.2598969 14.43,9.79440468 14.43,10.583154 L14.43,12.3198038 L17.13,12.3198038 L16.779,15.047395 L14.414,15.047395 L14.414,21.7127271 C18.768,20.6306992 22,16.7029678 22,12.009509 C22,6.48125719 17.523,2 12,2 Z" id="Path" fill="currentColor" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

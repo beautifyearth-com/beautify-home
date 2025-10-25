@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>FD508B75-D556-4D19-A271-78851D5D7965</title>
+    <defs>
+        <filter x="-36.4%" y="-36.4%" width="172.7%" height="172.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#A6B3B7" offset="0%"></stop>
+            <stop stop-color="#6D7C81" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Absolute-Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-2023-final-Design-desktop" transform="translate(-726.000000, -4878.000000)">
+            <g id="Group-42" transform="translate(220.000000, 4543.000000)">
+                <g id="Group-51" transform="translate(511.000000, 340.000000)">
+                    <g id="installation-coordination" filter="url(#filter-1)" transform="translate(10.000000, 10.000000)">
+                        <rect id="Rectangle" fill="url(#linearGradient-2)" x="0" y="0" width="55" height="55" rx="27.5"></rect>
+                        <g id="icons8-construction_worker" transform="translate(14.384615, 15.230769)" fill="#F3F6F7" fill-rule="nonzero">
+                            <path d="M1.02133413,0 L0,3.73323634 L2.1046424,5.6704833 L2.67232578,3.63233806 L4.20432692,4.31340151 L5.06452828,9.04048583 C5.2181052,9.66557085 5.59389663,10.2063655 6.11808894,10.5615269 L9.55393636,12.8090369 L8.28966346,19.3724696 L13.9615385,19.3724696 L14.8837133,14.8951083 L18.4435096,19.3724696 L21.8545673,19.3724696 L15.8777799,11.3813259 C15.5173184,11.0455364 15.0698739,10.8232774 14.5837585,10.7406215 L11.6833682,10.3647762 C11.1845605,10.3002008 10.7032251,10.1374115 10.2678789,9.88298653 L7.4592097,8.24338942 L6.6857722,3.97034736 L3.01194414,2.38624424 L3.46559502,0.691153149 L1.02133413,0 Z M13.9615385,3.8719715 C12.5595849,3.8719715 11.4230769,5.02841818 11.4230769,6.45496745 C11.4230769,7.88151673 12.5595849,9.03796341 13.9615385,9.03796341 C15.3634921,9.03796341 16.5,7.88151673 16.5,6.45496745 C16.5,5.02841818 15.3634921,3.8719715 13.9615385,3.8719715 Z M3.80769231,21.9554656 C3.10707692,21.9554656 2.53846154,22.5340567 2.53846154,23.2469636 C2.53846154,23.9598704 3.10707692,24.5384615 3.80769231,24.5384615 L24.1153846,24.5384615 C24.816,24.5384615 25.3846154,23.9598704 25.3846154,23.2469636 C25.3846154,22.5340567 24.816,21.9554656 24.1153846,21.9554656 L3.80769231,21.9554656 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
