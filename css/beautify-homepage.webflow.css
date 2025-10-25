@@ -17,7 +17,7 @@
 @font-face {
   font-family: Avenir Next;
   src: url('../fonts/AvenirNext-Bold.ttf') format("truetype");
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -163,7 +163,7 @@ a {
   align-items: center;
   margin-left: 0;
   margin-right: 25px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   text-decoration: none;
   display: flex;
@@ -230,7 +230,7 @@ a {
   height: 34px;
   padding-left: 0;
   padding-right: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   position: relative;
 }
@@ -245,7 +245,7 @@ a {
   margin-right: 10px;
   padding-left: 0;
   padding-right: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -442,7 +442,7 @@ a {
   margin-left: 66px;
   margin-right: 9px;
   padding-left: 19px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   line-height: 22px;
 }
@@ -462,7 +462,7 @@ a {
   color: #000;
   max-width: 405px;
   margin-left: 89px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 22px;
   display: block;
@@ -670,9 +670,9 @@ a {
   text-align: center;
   width: 490px;
   margin: 20px auto;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 22px;
   position: static;
 }
@@ -690,9 +690,9 @@ a {
   padding-top: 21px;
   padding-left: 0;
   padding-right: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 28px;
   display: block;
   position: relative;
@@ -761,9 +761,9 @@ a {
 .text-block-2 {
   color: #fff;
   letter-spacing: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 25px;
 }
 
@@ -852,7 +852,7 @@ a {
   padding-top: 8px;
   padding-left: 0;
   padding-right: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -881,9 +881,9 @@ a {
   width: 490px;
   height: 75px;
   margin-bottom: 10px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 22px;
   display: flex;
   overflow: visible;
@@ -960,9 +960,9 @@ a {
   width: 490px;
   margin-top: 20px;
   margin-left: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 22px;
 }
 
@@ -978,7 +978,7 @@ a {
 .want-to-manage-item {
   color: #fff;
   padding-left: 10px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 28px;
 }
@@ -987,7 +987,7 @@ a {
   background-color: #ef476f;
   border-radius: 10px;
   margin-top: 10px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -1092,9 +1092,9 @@ a {
   margin-top: 20px;
   margin-left: 20px;
   padding-left: 20px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 22px;
 }
 
@@ -1113,7 +1113,7 @@ a {
   margin-left: 44px;
   padding-left: 0;
   padding-right: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   line-height: 18px;
 }
@@ -1155,7 +1155,7 @@ a {
 .join-cards-text {
   color: #fff;
   margin-top: -11px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -1207,9 +1207,9 @@ a {
 
 .the-word-is-out-subtitle {
   color: #000;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 22px;
 }
 
@@ -1243,14 +1243,14 @@ a {
   margin-bottom: 15px;
   padding-left: 40px;
   padding-right: 40px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   line-height: 18px;
 }
 
 .link {
   color: #118ab2;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   text-decoration: underline;
 }
@@ -1303,7 +1303,7 @@ a {
   color: #000;
   width: 320px;
   margin-top: 20px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   line-height: 18px;
 }
@@ -1312,7 +1312,7 @@ a {
   color: #000;
   width: 320px;
   margin-top: 10px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 28px;
 }
@@ -1373,7 +1373,7 @@ a {
 
 .footer-column-title {
   color: #000;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   line-height: 18px;
 }
@@ -1388,7 +1388,7 @@ a {
   color: #000;
   margin-bottom: 28px;
   padding-bottom: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   text-decoration: none;
   display: inline-block;
@@ -1438,7 +1438,7 @@ a {
 
 .footer-trademark {
   color: #000;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 22px;
 }
@@ -1464,7 +1464,7 @@ a {
 
 .footer-bar-link {
   color: #000;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   text-decoration: none;
 }
@@ -1608,7 +1608,7 @@ a {
   width: 405px;
   margin-left: auto;
   padding-top: 167px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 22px;
 }
@@ -1647,18 +1647,18 @@ a {
 
 .drop-us-a-line-text {
   color: #000;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 22px;
 }
 
 .link-2 {
   color: #000;
   margin-top: 22px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 22px;
   display: block;
 }
@@ -1670,13 +1670,13 @@ a {
 .drop-us-form-title {
   color: #000;
   margin-bottom: 10px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   line-height: 18px;
 }
 
 .drop-us-form-subtitle {
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 10px;
   font-weight: 600;
   line-height: 14px;
@@ -1687,7 +1687,7 @@ a {
   border: 1px solid #e4ebed;
   border-radius: 1px;
   height: 38px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 18px;
 }
@@ -1711,13 +1711,13 @@ a {
   background-color: #118ab2;
   border-radius: 10px;
   width: 100%;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
 }
 
 .text-block-3 {
   color: #000;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -1743,7 +1743,7 @@ a {
 .schedule-paragraph {
   color: #000;
   width: 600px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -1771,15 +1771,15 @@ a {
 .beautify-member {
   color: #000;
   margin-top: 20px;
-  font-family: Avenir Next, sans-serif;
-  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
   line-height: 22px;
 }
 
 .beautify-member-role {
   color: #000;
   margin-top: 11px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
@@ -1795,16 +1795,16 @@ a {
   padding-top: 12px;
   padding-left: 0;
   padding-right: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
 }
 
 .text-block-4 {
   color: #000;
   margin-bottom: 20px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 22px;
 }
 
@@ -1829,7 +1829,7 @@ a {
 
 .instagram-link {
   color: #000;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -1916,7 +1916,7 @@ a {
 }
 
 .heading-2 {
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .heading-2.insidescooop {
@@ -1930,7 +1930,7 @@ a {
   letter-spacing: 5px;
   margin-top: 47px;
   margin-bottom: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
@@ -1948,7 +1948,7 @@ a {
 .add-some-color-subtitle {
   color: #fff;
   max-width: 320px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -1957,7 +1957,7 @@ a {
 .add-some-color-text {
   color: #fff;
   max-width: 405px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 22px;
 }
@@ -2029,7 +2029,7 @@ a {
 .heading-3 {
   color: #fff;
   margin-top: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
@@ -2088,7 +2088,7 @@ a {
 
 .paragraph-2 {
   margin-top: 10px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -2121,7 +2121,7 @@ a {
   height: 50px;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   line-height: 22px;
   display: flex;
   top: 92%;
@@ -2139,9 +2139,9 @@ a {
 
 .text-block-5 {
   color: #000;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .case-study-slide {
@@ -2196,7 +2196,7 @@ a {
   width: 330px;
   margin-top: 40px;
   margin-bottom: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 42px;
@@ -2207,20 +2207,20 @@ a {
   width: 370px;
   margin-bottom: 30px;
   padding-top: 20px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 22px;
 }
 
 .paragraph-4 {
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .case-study-locations {
   color: #000;
   margin-top: 0;
   margin-bottom: 5px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
@@ -2300,7 +2300,7 @@ a {
 .paragraph-5 {
   margin-bottom: 0;
   padding-top: 10px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
 }
 
@@ -2594,7 +2594,7 @@ a {
   white-space: normal;
   width: 100%;
   max-width: 450px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   line-height: 18px;
 }
@@ -2621,7 +2621,7 @@ a {
   margin-left: 28px;
   margin-right: 40px;
   padding-bottom: 20px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 22px;
 }
@@ -2713,14 +2713,14 @@ a {
 .service-item-text {
   max-width: 320px;
   padding-top: 20px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
 }
 
 .service-item-list-item {
   padding-bottom: 6px;
   padding-left: 7px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 22px;
 }
@@ -2735,7 +2735,7 @@ a {
   height: 45px;
   margin-top: 20px;
   padding-top: 12px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -2977,7 +2977,7 @@ a {
 .newsletter-small-text {
   color: #000;
   order: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 10px;
   font-weight: 500;
   line-height: 16px;
@@ -3033,7 +3033,7 @@ a {
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 22px;
   position: relative;
@@ -3273,7 +3273,7 @@ a {
 
 .newsletter-content-into-text {
   padding-left: 16px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
   line-height: 22px;
 }
@@ -3364,7 +3364,7 @@ a {
   text-align: left;
   justify-content: space-around;
   margin-top: 100px;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .footer-newsletter-container.footer-container.popup {
@@ -3595,7 +3595,7 @@ a {
 
 .paragraph-8 {
   color: #000;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
@@ -3697,9 +3697,9 @@ a {
   padding-top: 21px;
   padding-left: 0;
   padding-right: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 28px;
   display: block;
   position: relative;
@@ -3717,7 +3717,7 @@ a {
   padding-top: 8px;
   padding-left: 0;
   padding-right: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -4299,7 +4299,7 @@ a {
 .newsletter-small-text-white {
   color: #fff;
   order: 0;
-  font-family: Avenir Next, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 10px;
   font-weight: 500;
   line-height: 16px;
@@ -6081,14 +6081,14 @@ a {
   .quote-quotation {
     text-align: left;
     width: 320px;
-    font-family: Avenir Next, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   }
 
   .text-block-6 {
     width: 280px;
     margin-top: 60px;
     margin-right: 0;
-    font-family: Avenir Next, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   }
 
   .faq-container {
@@ -6987,7 +6987,7 @@ a {
   .service-details-subtitle {
     margin-top: 20px;
     margin-bottom: 0;
-    font-family: Avenir Next, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 600;
     line-height: 18px;
   }
