@@ -416,19 +416,24 @@ a {
 }
 
 .logo.fade-in {
-  transition: opacity .3s cubic-bezier(.215, .61, .355, 1), transform .8s cubic-bezier(.215, .61, .355, 1);
+  transition: none;
 }
 
 .fade-in.logo {
-  transition-duration: .8s, .8s;
-  transition-timing-function: linear, cubic-bezier(.215, .61, .355, 1);
-  flex: 0 0 calc(17.5% - 20px);
-  max-width: calc(17.5% - 20px);
+  flex: 0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+}
+
+@media screen and (min-width: 480px) {
+  .fade-in.logo {
+    transform: scale(0.7) !important;
+    transform-origin: center;
+  }
 }
 
 .more-than-a-mural-container {
   max-width: 1000px;
-  margin-top: -50px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 0;
@@ -745,7 +750,7 @@ a {
 .third-background-section {
   z-index: 5;
   margin-top: 50px;
-  padding-top: 100px;
+  padding-top: 20px;
   position: relative;
 }
 
@@ -768,7 +773,7 @@ a {
 
 .carousel-services {
   width: 4100px;
-  padding-top: 80px;
+  padding-top: 0;
   padding-bottom: 80px;
   display: flex;
 }
@@ -1047,7 +1052,7 @@ a {
 .projects-we-love-container {
   max-width: 1000px;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1097,7 +1102,7 @@ a {
   object-fit: fill;
   width: 120vw;
   max-width: 120vw;
-  height: 561px;
+  height: 350px;
   margin-bottom: -124px;
   margin-left: -10vw;
   position: relative;
@@ -1108,9 +1113,9 @@ a {
   object-fit: fill;
   width: 130vw;
   max-width: none;
-  height: 925px;
-  min-height: 925px;
-  max-height: 925px;
+  height: 500px;
+  min-height: 500px;
+  max-height: 500px;
   margin-left: -16vw;
   position: relative;
 }
@@ -1119,9 +1124,12 @@ a {
   z-index: 2;
   width: 100%;
   max-width: 1040px;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 106px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 20px;
   display: flex;
   position: relative;
@@ -5019,12 +5027,12 @@ a {
   }
 
   .image-25 {
-    height: 1100px;
+    height: 400px;
   }
 
   .image-26 {
     width: 350vw;
-    height: 1600px;
+    height: 700px;
     min-height: auto;
     max-height: none;
     margin-left: -32vw;
@@ -6597,8 +6605,8 @@ a {
 
   .third-background-section {
     margin-top: 50px;
-    padding-top: 100px;
-    overflow: hidden;
+    padding-top: 80px;
+    overflow: visible;
   }
 
   .image-20 {
@@ -6613,8 +6621,10 @@ a {
   }
 
   .carousel-container {
-    margin-top: -350px;
+    margin-top: 0;
     display: block;
+    overflow: visible;
+    background-color: transparent;
   }
 
   .carousel-services {
@@ -6681,8 +6691,18 @@ a {
 
   .projects-we-love-container {
     margin-top: 0;
+    margin-left: 28px;
     margin-right: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    display: block;
+    visibility: visible;
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
   }
 
   .fifth-background-section {
