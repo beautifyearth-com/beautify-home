@@ -65,24 +65,26 @@
   </div>
   <div class="first-background-section">
     <div class="background-images w-clearfix" style="opacity: 0.1 !important;"><img src="images/Hero-BG.png" loading="lazy" srcset="images/Hero-BG-p-500.png 500w, images/Hero-BG-p-800.png 800w, images/Hero-BG-p-1080.png 1080w, images/Hero-BG.png 1445w" sizes="(max-width: 1445px) 100vw, 1445px" alt="Background image" class="background-1"><img src="images/Paint-Blob-1.svg" loading="lazy" alt="Blue paint blob" class="wave-1"></div>
+
     <div class="connecting-community-container">
-      <div class="hero-content-container">
-        <h1 class="hero-main-headline">Activate Your Space</h1>
-        <h2 class="hero-secondary-headline">The Fastest Path to Stunning Murals & Public Art</h2>
-        <p class="hero-subheadline">Access the planet's largest network of local street artists. We make world-class murals the most cost-effective, fastest, and simplest way to transform any blank wall.</p>
-        <div class="hero-cta-container">
-          <a href="https://art.beautifyearth.com/signup" target="_blank" class="hero-cta-button primary">
-            <span class="cta-main-text">Start a Project</span>
-            <span class="cta-sub-text">Hire an artist or find a wall</span>
-          </a>
-          <a href="https://art.beautifyearth.com/signup" target="_blank" class="hero-cta-button secondary">
-            <span class="cta-main-text">List My Wall</span>
-            <span class="cta-sub-text">Rent out or donate my wall</span>
-          </a>
-          <a href="https://art.beautifyearth.com/signup" target="_blank" class="hero-cta-button tertiary">
-            <span class="cta-main-text">Join as an Artist</span>
-            <span class="cta-sub-text">Get hired</span>
-          </a>
+      <div class="hero-content-container-root">
+        <h1 class="hero-main-headline">The Fastest Path to Stunning Murals & Public Art</h1>
+        <div class="hero-content-container">
+          <p class="hero-subheadline hero-subheadline-">Access the planet's largest network of local street artists. We make world-class murals the most cost-effective, fastest, and simplest way to transform any blank wall.</p>
+          <div class="hero-cta-container">
+            <a href="https://art.beautifyearth.com/signup" target="_blank" class="hero-cta-button primary">
+              <span class="cta-main-text">Start a Project</span>
+              <span class="cta-sub-text">Hire an artist or find a wall</span>
+            </a>
+            <a href="https://art.beautifyearth.com/signup" target="_blank" class="hero-cta-button secondary">
+              <span class="cta-main-text">List My Wall</span>
+              <span class="cta-sub-text">Rent out or donate my wall</span>
+            </a>
+            <a href="https://art.beautifyearth.com/signup" target="_blank" class="hero-cta-button tertiary">
+              <span class="cta-main-text">Join as an Artist</span>
+              <span class="cta-sub-text">Get hired</span>
+            </a>
+          </div>
         </div>
       </div>
       <div data-poster-url="https://uploads-ssl.webflow.com/642b4c92d4d87f8037892daf/642c6b0bc07f48c9b026f180_Beautify Homepage Hero Video-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/642b4c92d4d87f8037892daf/642c6b0bc07f48c9b026f180_Beautify Homepage Hero Video-transcode.mp4,https://uploads-ssl.webflow.com/642b4c92d4d87f8037892daf/642c6b0bc07f48c9b026f180_Beautify Homepage Hero Video-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="bg-video w-background-video w-background-video-atom"><video id="941d8b4a-5d35-ffaa-a88e-86affe492740-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/642b4c92d4d87f8037892daf/642c6b0bc07f48c9b026f180_Beautify Homepage Hero Video-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
@@ -109,7 +111,7 @@
   </div>
   <div class="third-background-section">
     <div class="background-images"><img src="images/Services-BG-minimized.png" loading="lazy" data-w-id="78bcfb2d-5bb7-20ce-638a-71f0ff8f2c41" sizes="(max-width: 2096px) 100vw, 2096px" alt="" srcset="images/Services-BG-minimized-p-500.png 500w, images/Services-BG-minimized-p-800.png 800w, images/Services-BG-minimized-p-1080.png 1080w, images/Services-BG-minimized-p-1600.png 1600w, images/Services-BG-minimized-p-2000.png 2000w, images/Services-BG-minimized.png 2096w" class="image-20"></div>
-  
+
     <div class="carousel-container">
       <div class="projects-we-love-container">
         <h2 class="want-to-manage-title">PROJECTS WE LOVE</h2>
@@ -451,7 +453,7 @@ $( "#newsletter-form" ).on("submit", async event => {
   .fade-in:nth-child( 2 ) { transition-delay: .05s }
   .fade-in:nth-child( 3 ) { transition-delay: .15s }
   .fade-in:nth-child( 4 ) { transition-delay: .25s }
-  .bg-video>video {   
+  .bg-video>video {
     border-radius: 10px;
    }
    .second-background-section {
