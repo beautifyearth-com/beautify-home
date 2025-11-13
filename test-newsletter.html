@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Newsletter Form Test</title>
+  <script src="./js/ph.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -103,7 +104,7 @@
 <body>
   <div class="container">
     <h1>📧 Newsletter Form Test</h1>
-    
+
     <div class="info">
       <strong>⚠️ Important:</strong> This must be run on a local web server (http://localhost), not opened directly (file://)
     </div>
@@ -113,7 +114,7 @@
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" placeholder="your@email.com" required>
       </div>
-      
+
       <button type="submit" id="submit-btn">Subscribe to Newsletter</button>
     </form>
 
@@ -138,10 +139,10 @@
   <script>
     // Show debug info
     document.getElementById('protocol').textContent = window.location.protocol;
-    
-    const apiDestination = location.hostname.includes('webflow.io') ? 
+
+    const apiDestination = location.hostname.includes('webflow.io') ?
       'api-dev.bedev.us' : 'api.beautifyearth.com';
-    
+
     const apiUrl = `https://${apiDestination}/user/registerEmailForNewsletter`;
     document.getElementById('api-endpoint').textContent = apiUrl;
 
@@ -155,25 +156,25 @@
     // Form submission handler
     document.getElementById('newsletter-test-form').addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       const email = document.getElementById('email').value;
       const submitBtn = document.getElementById('submit-btn');
       const successMsg = document.getElementById('success-message');
       const errorMsg = document.getElementById('error-message');
       const errorText = document.getElementById('error-text');
-      
+
       // Hide messages
       successMsg.style.display = 'none';
       errorMsg.style.display = 'none';
-      
+
       // Disable button
       submitBtn.disabled = true;
       submitBtn.textContent = 'Subscribing...';
-      
+
       try {
         console.log('Submitting email:', email);
         console.log('API URL:', apiUrl);
-        
+
         const response = await fetch(apiUrl, {
           method: 'POST',
           mode: 'cors',
@@ -182,23 +183,23 @@
           },
           body: JSON.stringify({ email })
         });
-        
+
         console.log('Response status:', response.status);
         console.log('Response ok:', response.ok);
-        
+
         if (!response.ok) {
           const errorData = await response.text();
           console.error('Error response:', errorData);
           throw new Error(`Server returned ${response.status}: ${errorData}`);
         }
-        
+
         const data = await response.json();
         console.log('Success response:', data);
-        
+
         // Show success
         successMsg.style.display = 'block';
         document.getElementById('email').value = '';
-        
+
       } catch (error) {
         console.error('Error:', error);
         errorText.textContent = error.message;
