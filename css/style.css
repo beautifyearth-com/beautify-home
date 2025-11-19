@@ -1127,3 +1127,350 @@ footer {
     grid-row: span 1;
   }
 }
+
+/* Property Owners Page */
+.property-hero {
+  background: linear-gradient(135deg, rgba(17, 138, 178, 0.95) 0%, rgba(13, 110, 143, 0.95) 100%);
+  color: #fff;
+  padding: 6rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.property-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.property-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.property-hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 140%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.property-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.property-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.property-hero h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+.property-hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.property-hero .btn-primary {
+  background: #fff;
+  color: #118ab2;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  border: 3px solid #fff;
+}
+
+.property-hero .btn-primary:hover {
+  background: #2ed47a;
+  color: #fff;
+  border-color: #2ed47a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.property-intro {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.property-intro .section-header {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.transformation-section {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.transformation-section .split {
+  align-items: center;
+}
+
+.before-after-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.before-after-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.transformation-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.transformation-section p {
+  margin-bottom: 1rem;
+}
+
+.transformation-section .btn {
+  margin-top: 1rem;
+}
+
+.property-perks {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.perk-item {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #e4ebed;
+}
+
+.perk-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.perk-item h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #118ab2;
+}
+
+.perk-item p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 1.0625rem;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  max-width: 700px;
+  margin: 3rem auto;
+  border-left: 4px solid #118ab2;
+}
+
+.testimonial blockquote {
+  margin: 0;
+}
+
+.testimonial p {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.testimonial cite {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  color: #118ab2;
+  font-size: 1rem;
+}
+
+.cta-center {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.property-process {
+  padding: 5rem 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.process-step {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.process-step:hover {
+  transform: translateY(-4px);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #118ab2 0%, #0d6e8f 100%);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin: 0 auto 1.5rem;
+}
+
+.process-step h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.process-step p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.listed-walls {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.walls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.wall-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.wall-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.wall-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.wall-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  color: #fff;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+}
+
+.wall-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.wall-content p {
+  font-size: 1rem;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.property-cta {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.property-cta .section-header h2 {
+  color: #333;
+}
+
+.property-cta .section-header p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .property-hero {
+    padding: 4rem 0 3rem;
+  }
+  
+  .perks-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .walls-grid {
+    grid-template-columns: 1fr;
+  }
+}
