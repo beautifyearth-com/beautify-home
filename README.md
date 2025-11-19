@@ -1,6 +1,6 @@
 # Beautify Earth - Complete Website
 
-Complete static site from Webflow export with dynamic featured artists section.
+Complete static site from Webflow export with dynamic featured artists section. 
 
 ## Features
 
