@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beautify Earth × City of LA — Phase 1 Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --dark: #0F2420;
+    --teal: #1A9170;
+    --teal-light: #D6F0E6;
+    --teal-mid: #0D5C47;
+    --blue: #185FA5;
+    --blue-light: #E3EEF9;
+    --amber: #7A4F0D;
+    --amber-light: #FDF3E3;
+    --white: #FFFFFF;
+    --off: #F7FAF9;
+    --gray: #5C6E6A;
+    --border: #D4E5DE;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off);
+    color: var(--dark);
+    font-size: 13px;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    max-width: 900px;
+    margin: 32px auto;
+    background: var(--white);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--dark);
+    padding: 28px 36px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-left h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--white);
+    line-height: 1.15;
+    font-weight: 400;
+  }
+  .header-left h1 span { color: var(--teal); }
+  .header-left p {
+    color: #8AADA7;
+    font-size: 11.5px;
+    margin-top: 5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .header-right { text-align: right; }
+  .header-right .tag {
+    background: var(--teal);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+  .header-right .date { color: #8AADA7; font-size: 11px; display: block; }
+
+  /* HEAD START BANNER */
+  .headstart {
+    background: var(--amber-light);
+    border-bottom: 1px solid #F0D9B5;
+    padding: 11px 36px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .headstart a {
+    color: var(--amber);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .headstart a:hover { opacity: 0.8; }
+  .headstart-icon {
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .headstart p {
+    font-size: 12px;
+    color: var(--amber);
+    line-height: 1.45;
+  }
+  .headstart p strong { font-weight: 600; }
+
+  /* SCOPE STRIP */
+  .scope-strip {
+    background: var(--teal-light);
+    border-bottom: 1px solid var(--border);
+    padding: 13px 36px;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  .scope-strip .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--teal-mid);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .scope-items { display: flex; gap: 0; flex-wrap: wrap; }
+  .scope-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--teal-mid);
+    font-weight: 500;
+    padding: 0 16px 0 0;
+    margin-right: 16px;
+    border-right: 1px solid #B2D9CB;
+  }
+  .scope-item:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  .scope-item::before { content: '✓'; font-size: 11px; color: var(--teal); font-weight: 700; }
+
+  /* BODY */
+  .body { padding: 26px 36px 0; }
+
+  .intro {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.65;
+    max-width: 700px;
+    margin-bottom: 22px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .intro strong { color: var(--dark); }
+
+  /* PRICING TIERS */
+  .tiers-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .tiers {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .tier {
+    border: 1.5px solid var(--border);
+    border-radius: 4px;
+    overflow: visible;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .tier.featured {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 1px var(--teal);
+  }
+
+  .tier-badge {
+    position: absolute;
+    top: -1px; right: -1px;
+    background: var(--teal);
+    color: var(--white);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 0 2px 0 4px;
+  }
+
+  .tier-header {
+    padding: 14px 18px;
+    background: var(--off);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .tier.featured .tier-header {
+    background: var(--teal-light);
+    border-right-color: #B2D9CB;
+    border-bottom-color: #B2D9CB;
+    padding-top: 28px;
+  }
+  .tier.featured .tier-pricing {
+    padding-top: 28px;
+  }
+  .tier-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--dark);
+    margin-bottom: 1px;
+  }
+  .tier-walls { font-size: 10.5px; color: var(--gray); font-weight: 500; }
+  .tier.featured .tier-walls { color: var(--teal-mid); }
+  .tier-headstart {
+    margin-top: 6px;
+    font-size: 10px;
+    color: var(--amber);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .tier-headstart a { color: var(--amber); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+  .tier-headstart {
+    font-size: 10px;
+    color: var(--teal-mid);
+    margin-top: 5px;
+    line-height: 1.4;
+  }
+  .tier-headstart a { color: var(--teal-mid); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+
+  .tier-pricing {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .tier.featured .tier-pricing { border-bottom-color: #B2D9CB; }
+
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 4px 0;
+  }
+  .price-row + .price-row {
+    border-top: 1px dashed #E0EDEA;
+    margin-top: 4px;
+    padding-top: 8px;
+  }
+  .price-type { font-size: 10.5px; color: var(--gray); font-weight: 500; }
+  .price-type .note { display: block; font-size: 9.5px; color: #9AAEA9; font-weight: 400; }
+  .price-amount { text-align: right; }
+  .price-amount .big {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    color: var(--dark);
+    display: block;
+    line-height: 1;
+  }
+  .price-amount .small { font-size: 9.5px; color: var(--gray); display: block; margin-top: 1px; }
+  .tier.featured .price-amount .big { color: var(--teal-mid); }
+
+  .tier-includes { padding: 14px 20px; display: flex; flex-direction: column; justify-content: flex-start; grid-column: 1 / 3; grid-row: 2; border-top: 1px solid var(--border); }
+  .tier.featured .tier-includes { border-top-color: #B2D9CB; }
+  .tier-includes-wrap { flex-direction: row; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; }
+  .tier-includes-wrap .includes-label-full { width: 100%; margin-bottom: 4px; }
+  .tier-includes-wrap .include-item { width: 48%; }
+  .tier-includes-wrap .include-links { width: 100%; }
+  .tier.featured .tier-includes { border-top-color: #B2D9CB; }
+
+  .includes-label {
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+  .include-item {
+    font-size: 11.5px;
+    color: var(--dark);
+    padding: 2.5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    line-height: 1.4;
+  }
+  .include-item::before { content: '—'; color: var(--teal); font-size: 11px; flex-shrink: 0; margin-top: 1px; }
+  .include-item.include-all { color: var(--teal-mid); font-size: 12px; }
+  .include-item.include-all::before { content: '✓'; color: var(--teal); font-size: 11px; }
+  .tier.featured .include-item.include-all { color: var(--teal-mid); }
+  .include-item.dim::before { color: #C8DDD9; }
+  .include-item.include-links { color: var(--gray); font-style: italic; margin-top: 6px; padding-top: 8px; border-top: 1px dashed var(--border); align-items: baseline; gap: 4px; line-height: 1.3; flex-wrap: wrap; }
+  .include-item.include-links::before { content: none; }
+  .include-item.include-links a {
+    color: var(--teal);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-style: normal;
+  }
+  .include-item.include-links a:hover { color: var(--teal-mid); }
+
+  /* NOT INCLUDED BOX */
+  .not-included {
+    background: #F9F9F9;
+    border: 1px solid #E2E8E6;
+    border-left: 3px solid #C8DDD9;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .not-included-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 700;
+    color: var(--gray);
+    white-space: nowrap;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+  .not-included-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .ni-tag {
+    background: var(--white);
+    border: 1px solid #D8E4E1;
+    border-radius: 2px;
+    font-size: 11px;
+    color: var(--gray);
+    padding: 3px 9px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .ni-tag::before { content: '✕'; font-size: 9px; color: #AABFBB; }
+
+  /* ARTIST NOTE */
+  .artist-note {
+    background: var(--blue-light);
+    border: 1px solid #C2D8EF;
+    border-radius: 4px;
+    padding: 11px 16px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+  .artist-note .star { color: var(--blue); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+  .artist-note p { font-size: 11.5px; color: var(--blue); line-height: 1.55; }
+  .artist-note p strong { font-weight: 600; }
+
+  /* WHY NOW */
+  .why-now-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .why-now-col {
+    background: var(--off);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--teal);
+    border-radius: 4px;
+    padding: 13px 16px;
+  }
+  .why-now-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 700;
+    color: var(--teal-mid);
+    margin-bottom: 8px;
+  }
+  .why-now-col p {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+  .why-now-col p strong { color: var(--dark); }
+
+  /* PHASE 2 CALLOUT */
+  .phase2 {
+    background: var(--amber-light);
+    border-top: 1px solid #F0D9B5;
+    border-bottom: 1px solid #F0D9B5;
+    padding: 14px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .phase2-label {
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--amber);
+    background: var(--white);
+    border: 1px solid #F0D9B5;
+    border-radius: 2px;
+    padding: 3px 8px;
+    flex-shrink: 0;
+  }
+  .phase2 p {
+    font-size: 12.5px;
+    color: var(--amber);
+    font-weight: 500;
+    line-height: 1.45;
+  }
+  .phase2 p strong { font-weight: 700; }
+
+  /* CLOSING */
+  .closing {
+    background: var(--dark);
+    padding: 18px 36px;
+  }
+  .closing p {
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    color: var(--teal-light);
+    line-height: 1.6;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* TWO COL */
+  .two-col {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+  .box {
+    background: var(--off);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 13px 16px;
+  }
+  .box-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 700;
+    color: var(--gray);
+    margin-bottom: 9px;
+  }
+  .box-item {
+    font-size: 12px;
+    color: var(--dark);
+    padding: 2.5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    line-height: 1.4;
+  }
+  .box-item::before { content: '·'; color: var(--teal); font-size: 16px; flex-shrink: 0; line-height: 1; }
+
+  /* FOOTER */
+  .footer {
+    background: var(--dark);
+    padding: 15px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-left p { color: #8AADA7; font-size: 11px; line-height: 1.7; }
+  .footer-left p strong { color: var(--white); }
+  .footer-right { text-align: right; }
+  .footer-right p { color: #8AADA7; font-size: 11px; line-height: 1.7; }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; border-radius: 0; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="header-left">
+      <h1>Beautify Earth <span>×</span> City of Los Angeles</h1>
+      <p>Phase 1 Proposal — LA Wall Registry </p>
+    </div>
+    <div class="header-right">
+      <span class="tag">Phase 1 Only</span>
+      <span class="date">Prepared May 2026 · beautifyearth.com</span>
+    </div>
+  </div>
+
+  <div class="scope-strip">
+    <span class="label">Phase 1 Scope</span>
+    <div class="scope-items">
+      <span class="scope-item">Co-branded landing page</span>
+      <span class="scope-item">Co-brand identity</span>
+      <span class="scope-item">Wall owner recruitment campaign</span>
+      <span class="scope-item">City of LA boundary mapping</span>
+      <span class="scope-item">Milestone reporting</span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <p class="intro">
+      Phase 1 builds the <strong>LA Wall Registry</strong> — the verified database of wall owners within City limits, and the backbone of the public-facing <strong>LA Mural Grid</strong>. Beautify Earth serves as <strong>administrative concierge</strong> through the ordinance process, driving registrations via BIDs, Chambers, neighborhood associations, community partners, and other stakeholders under the City of LA co-brand.
+    </p>
+
+    <p class="tiers-label">Select a plan</p>
+
+    <div class="tiers">
+
+      <!-- TIER 1: CORE -->
+      <div class="tier">
+        <div class="tier-header">
+          <div class="tier-name">Core Program</div>
+          <div class="tier-walls">1,000 registered walls = 300 existing + 700 new</div>
+        </div>
+        <div class="tier-pricing">
+          <div class="price-row">
+            <div class="price-type">Upfront (flat)<span class="note">Pay once, start immediately</span></div>
+            <div class="price-amount"><span class="big">$18,000</span><span class="small">one-time</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-type">Monthly retainer<span class="note">3-month minimum</span></div>
+            <div class="price-amount"><span class="big">$6,500</span><span class="small">× 3 mo = $19,500 total</span></div>
+          </div>
+        </div>
+        <div class="tier-includes tier-includes-wrap">
+          <div class="includes-label includes-label-full">Includes</div>
+          <div class="include-item">Co-branded landing page on BE platform</div>
+          <div class="include-item">Co-brand identity + program naming</div>
+          <div class="include-item">Full-scale outreach </div>
+          <div class="include-item">Wall registration onboarding flow</div>
+          <div class="include-item">Wall owner info page + FAQ</div>
+          <div class="include-item">GIS boundary overlay (City of LA) </div>
+          <div class="include-item">Milestone progress reports every 200 walls acquired</div>
+          <div class="include-item include-links"><span>Los Angeles assets currently available on BE platform: </span><a href="https://art.beautifyearth.com/walls?viewMode=gallery&lat=34.0549076&lon=-118.242643" target="_blank">300+ walls</a>, <a href="https://art.beautifyearth.com/artists?lat=34.0549076&lon=-118.242643" target="_blank">500+ artists</a>, <a href="https://art.beautifyearth.com/murals?viewMode=gallery&lat=34.0549076&lon=-118.242643" target="_blank">3,000+ murals</a></div>
+        </div>
+      </div>
+
+      <!-- TIER 2: OLYMPIC PROGRAM (FEATURED) -->
+      <div class="tier featured">
+        <div class="tier-badge">Recommended</div>
+        <div class="tier-header">
+          <div class="tier-name">Olympic Program</div>
+          <div class="tier-walls">1,300 registered  walls = 300 existing + 1,000 new</div>
+        </div>
+        <div class="tier-pricing">
+          <div class="price-row">
+            <div class="price-type">Upfront (flat)<span class="note">Pay once, start immediately</span></div>
+            <div class="price-amount"><span class="big">$22,000</span><span class="small">one-time</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-type">Monthly retainer<span class="note">3-month minimum</span></div>
+            <div class="price-amount"><span class="big">$7,800</span><span class="small">× 3 mo = $23,400 total</span></div>
+          </div>
+        </div>
+        <div class="tier-includes">
+          <div class="includes-label">What's included</div>
+          <div class="include-item include-all">All Core Program features</div>
+          <div class="include-item include-all"><strong>1,300 total walls</strong> in the LA Wall Registry</div>
+        </div>
+      </div>
+
+      <!-- TIER 3: SCALE -->
+      <div class="tier">
+        <div class="tier-header">
+          <div class="tier-name">Scale</div>
+          <div class="tier-walls">1,800 registered walls · 3-month program</div>
+        </div>
+        <div class="tier-pricing">
+          <div class="price-row">
+            <div class="price-type">Upfront (flat)<span class="note">Pay once, start immediately</span></div>
+            <div class="price-amount"><span class="big">$28,800</span><span class="small">one-time</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-type">Monthly retainer<span class="note">3-month minimum</span></div>
+            <div class="price-amount"><span class="big">$10,200</span><span class="small">× 3 mo = $30,600 total</span></div>
+          </div>
+        </div>
+        <div class="tier-includes">
+          <div class="includes-label">What's included</div>
+          <div class="include-item include-all">All Core Program features</div>
+          <div class="include-item include-all"><strong>1,800 total walls</strong> in the LA Wall Registry</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- NOT INCLUDED -->
+    <div class="not-included">
+      <div class="not-included-label">Not included<br>in any tier</div>
+      <div class="not-included-items">
+        <span class="ni-tag">Murals actually painted</span>
+        <span class="ni-tag">Sponsor recruitment or activation</span>
+        <span class="ni-tag">Ordinance carve-out or reform work</span>
+        <span class="ni-tag">Media outreach</span>
+        <span class="ni-tag">Council member announcement support</span>
+        <span class="ni-tag">Mural project management</span>
+        <span class="ni-tag">Artist payment or funding</span>
+        <span class="ni-tag">Anti-graffiti coating costs</span>
+      </div>
+    </div>
+
+    <!-- CITY PROVIDES + TIMELINE -->
+    <div class="two-col">
+      <div class="box">
+        <div class="box-title">What the City provides</div>
+        <div class="box-item">GIS boundary file (City of LA limits)</div>
+        <div class="box-item">Co-brand review + identity approval</div>
+        <div class="box-item">Warm introductions to City stakeholders or relationships where applicable</div>
+        <div class="box-item">Joint press release from the City of LA </div>
+      </div>
+      <div class="box">
+        <div class="box-title">3-Month Program Timeline</div>
+        <div class="box-item"><strong>Pre-launch</strong> Co-brand identity, Landing Page, Press Release </div>
+        <div class="box-item"><strong>Month 1 —</strong> First outreach wave </div>
+        <div class="box-item"><strong>Month 2 —</strong> Second outreach wave </div>
+        <div class="box-item"><strong>Month 3 —</strong> Final push to goal, wall map delivery, full milestone report</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="phase2">
+    <span class="phase2-label">Phase 2</span>
+    <p><strong>Sponsors, press, carve-out, and murals painted</strong> — full scope available upon request.</p>
+  </div>
+
+  <div class="closing">
+    <p>Every wall in Los Angeles tells a story. Together we can activate them — and show the world the beauty of our city.</p>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      <p><strong>Evan Meyer</strong> · Founder, Beautify Earth</p>
+      <p>evan@beautifyearth.com · beautifyearth.com  ·  516-473-1096 </p>
+    </div>
+    <div class="footer-right">
+      <p>Questions or to move forward, contact Evan directly.</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
