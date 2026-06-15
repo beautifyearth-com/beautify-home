@@ -66,7 +66,7 @@
         </div>
         
         <div class="contact-form">
-          <form name="contact" method="POST" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+          <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact">
             <p style="display:none">
               <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -109,8 +109,6 @@
               <label for="message">Message</label>
               <textarea id="message" name="Message" data-name="Message" rows="5"></textarea>
             </div>
-            
-            <div data-netlify-recaptcha="true"></div>
             
             <button type="submit" class="btn btn-primary btn-lg">Send</button>
           </form>
@@ -187,7 +185,10 @@
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString()
         })
-        .then(() => {
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Form submission failed: ' + response.status);
+          }
           this.style.display = 'none';
           this.nextElementSibling.style.display = 'block';
         })
