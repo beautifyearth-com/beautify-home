@@ -1,0 +1,16 @@
+{
+  "name": "beautify-homepage",
+  "version": "1.0.0",
+  "description": "Beautify Earth static website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -c-1",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": ["static", "website", "beautify-earth"],
+  "author": "Beautify Earth",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
