@@ -66,8 +66,8 @@
         </div>
         
         <div class="contact-form">
-          <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact">
+          <form name="contact-v2" method="POST" netlify netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact-v2">
             <p style="display:none">
               <label>Don't fill this out if you're human: <input name="bot-field" /></label>
             </p>
@@ -160,7 +160,7 @@
 
   <script>
     // Handle contact form submission
-    const contactForm = document.querySelector('form[name="contact"]');
+    const contactForm = document.querySelector('form[name="contact-v2"]');
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
