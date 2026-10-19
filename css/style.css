@@ -832,6 +832,16 @@ section.dark .btn-primary:hover {
   color: #666;
   margin-bottom: 2rem;
 }
+.contact-note {
+  font-size: 0.95rem;
+  color: #666;
+  margin: -1rem 0 2rem;
+  max-width: 28rem;
+}
+.contact-note a {
+  color: inherit;
+  text-decoration: underline;
+}
 .contact-social {
   display: flex;
   gap: 1rem;
