@@ -1495,3 +1495,6 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Perk cards on a grey band (earnings, FAQ on property-owners) stay readable as cards. */
+section.alt .perk-item { background: #fff; }
